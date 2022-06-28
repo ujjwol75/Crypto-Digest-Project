@@ -1,0 +1,103 @@
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { FaSearch } from 'react-icons/fa';
+import { BiMenu } from 'react-icons/bi';
+import { APIs} from '../../pages/api/hello';
+import useGetHook from '../customHooks/useGetHooks';
+
+function Header() {
+    const [showNav, setshowNav] = useState(false);
+    const [showSearch, setshowSearch] = useState(false);
+    const { isLoading:navigationLoading, data: navigationListData } = useGetHook(
+        {
+            queryKey: 'navigationListData',
+            url: APIs?.navigation
+        }
+    );
+
+    // console.log( navigationListData)
+    return (
+        <div className="header container">
+            <div className="logo">
+                <Link href="/">
+                    <div className="img-holder">
+                        <img src="https://cdn.shortpixel.ai/spai/q_lossless+ret_img/https://cryptopotato.com/wp-content/uploads/2020/11/cplogo3.png" alt="" />
+                    </div>
+                </Link>
+            </div>
+            <div className="navbar">
+                <div className={showNav ? "mobile-menu" : "n-list"}>
+                    <ul>
+                        {/* {navigationListData?.results?.map((item, key) =>
+                            <li>
+                                <Link href="/cryptoNews">
+                                    {
+                                        item?.title
+                                    }
+                                </Link>
+                            </li>
+                        )} */}
+                        <li>
+                            <Link href="/cryptoNews">
+                                Crypto News
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/margintrading">
+                                Margin Trading
+                            </Link>
+                        </li>
+                        <li className='dropdown'>
+                            <Link href="/guides">
+                                Guides
+                            </Link>
+                            <div className='dropdown-content'>
+                                <Link href="/abc">Bitcoins &#38; Cryptoguides 101</Link>
+                                <a href="#">Bitcoins For Beginners</a>
+                                <a href="#">Editorials</a>
+                            </div>
+                        </li>
+                        <li>
+                            <Link href="/defi">
+                                DeFi &#38; NFT
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/buy">
+                                Buy
+                            </Link>
+                        </li>
+                        <li className='dropdown'>
+                            <Link href="/language ">
+                                Language
+                            </Link>
+                            <div className='dropdown-content'>
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button className='searchbutton'>
+                    <FaSearch className='search' onClick={() => setshowSearch(!showSearch)} />
+                </button>
+                <div className="hamburger" onClick={() => setshowNav(!showNav)}>
+                    <BiMenu />
+                </div>
+            </div>
+            {/* for search input */}
+            <div className={showSearch ? "searchInputOn" : "searchInputoff"}>
+                <form action="">
+                    <input type="text" placeholder='Search...' />
+                </form>
+            </div>
+            {/* for seach input ends here */}
+        </div>
+    )
+}
+
+export default Header;
