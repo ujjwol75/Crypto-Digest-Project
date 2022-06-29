@@ -13,7 +13,8 @@ function HomeCryptoNews() {
         url: APIs?.posts
     }
 );
-console.log(postsData)
+// console.log(postsData)
+
   return (
     <div className="homeCryptoNews-wrapper container">
       <div className="homeCryptoNews-left">
@@ -21,7 +22,7 @@ console.log(postsData)
 
          {postsData?.results?.map((item, key)=>
          <Link href={`/singlepages/${item.id}`}>
-          <a href="">
+          <a>
           <HomeCrytoNewsContains
              pictures={item.image}
              date={item.created}
@@ -29,7 +30,7 @@ console.log(postsData)
              newsText={item.description}
            />
           </a>
-            
+
           </Link> 
          )}
 

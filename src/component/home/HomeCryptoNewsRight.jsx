@@ -86,10 +86,6 @@ function HomeCryptoNewsRight() {
             pictures="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/thumbs/Untitled-design-5-3flj1bk50sk0twxpm2huru.jpg"
             text="Our Ambition is to Become the Amazon of Crypto: Interview with Coinbase’s Guillaume Chatain"
           />
-          <div className='iframe-holder'>
-          <iframe src="https://cdn.coinzilla.io/html_customers/789f8b324efbc48cd8e886c24c7de33c/index.html" 
-          width="100%" height="100%" frameBorder="0" scrolling="no"></iframe>
-          </div>
         </div>
     </>
   )

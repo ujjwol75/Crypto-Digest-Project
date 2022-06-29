@@ -1,4 +1,5 @@
 export const APIs={
   navigation:'/navigation/',
-  posts:'/posts/'
+  posts:'/posts/',
+  bannerImage:'/banner-image/'
 }

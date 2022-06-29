@@ -114,7 +114,7 @@ h2 {
 }
 
 .searchInputOn input {
-  width: 100%;
+  width: 97%;
   height: 100%;
   background: black;
   border: none;
@@ -159,7 +159,8 @@ h2 {
   border-right: 6px solid transparent;
   border-top: 6px solid #FED319;
 }
-.dropdown:hover .dropdown-content{
+
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
@@ -186,6 +187,7 @@ h2 {
     justify-content: flex-end;
     align-items: center;
   }
+
   .hamburger {
     display: flex;
   }
@@ -236,8 +238,9 @@ h2 {
   background-color: #FED319;
   padding: 1px 100px;
 }
-.invisiblesection{
-  display:none;
+
+.invisiblesection {
+  display: none;
 }
 
 ul.headlist-wrappper {
@@ -261,36 +264,40 @@ ul.headlist-wrappper li:hover a {
     padding: 5px 20px;
     display: flex;
     justify-content: flex-start;
-    height:4rem;
+    height: 4rem;
   }
 
   ul.headlist-wrappper {
-   display:none;
+    display: none;
   }
 
   ul.headlist-wrappper {
     font-size: 20px;
   }
 
-  .invisiblesection{
-    display:flex;
-    gap:30px;
-    font-size:18px;
+  .invisiblesection {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
     justify-content: center;
   }
-  .invisiblesection .img-holder{
-    width:50px;
-    height:50px;
+
+  .invisiblesection .img-holder {
+    width: 50px;
+    height: 50px;
   }
-  .invisiblesection li{
+
+  .invisiblesection li {
     list-style-type: none;
     display: flex;
-    gap:5px;
+    gap: 5px;
   }
-  .invisiblesection span{
-    font-size:30px;
+
+  .invisiblesection span {
+    font-size: 30px;
   }
-  .invisiblesection .boldname{
+
+  .invisiblesection .boldname {
     font-weight: bold;
   }
 }
@@ -426,7 +433,6 @@ ul.headlist-wrappper li:hover a {
   flex-direction: column;
   gap: 30px;
   border-left: 4px solid #979c9c;
-  height: 117rem;
 }
 
 .cryptoNewsRightImages {
@@ -882,11 +888,13 @@ ul.footerlinks {
 .exchange td {
   overflow: hidden;
 }
-.exchange td:nth-child(2){
-padding:0 40px;
+
+.exchange td:nth-child(2) {
+  padding: 0 40px;
 }
+
 .exchange tr.heading {
-  background: none!important;
+  background: none !important;
 }
 
 .exchange tr:nth-child(odd) {
@@ -895,9 +903,9 @@ padding:0 40px;
 
 .exchange th {
   padding: 12px 10px;
-  text-align:center;
-  font-size:18px;
-  
+  text-align: center;
+  font-size: 18px;
+
 }
 
 /* MarginTradingExchange ends here */
@@ -960,45 +968,162 @@ padding:0 40px;
   justify-content: center;
   align-items: center;
 }
-.rating-wrapper:hover{
+
+.rating-wrapper:hover {
   background-color: #FED319;
 }
+
 .rating {
   text-align: center;
   font-size: 30px;
-  color:black;
+  color: black;
 }
 
 /* Rating ends here */
 
 /* rate */
-.rate{
+.rate {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.rate a{
-  padding:5px;
+
+.rate a {
+  padding: 5px;
   background-color: #FED319;
   border-radius: 8px;
 }
-.rate p{
+
+.rate p {
   text-align: center;
-  font-size:14px;
+  font-size: 14px;
 }
+
 /* rate ends here */
 
-@media screen and (max-width:480px){
-  .MarginTraddingWrapper{
+@media screen and (max-width:480px) {
+  .MarginTraddingWrapper {
     flex-direction: column;
   }
 }
+
 /* MarginTraddingWrapper ends here*/
 
-/* Single Detail */
-.singleDetail-wrapper{
-  display:flex;
+/* SingleDetail */
+.singleDetail-wrapper {
+  display: flex;
   gap: 30px;
 }
-/* Single Detai */
+
+.singleDetail-wrapper .iframe-holder2 {
+  height: 100px;
+}
+
+.singleDetail-wrapper iframe {
+  border: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Singledetailhead */
+.singledetailbold-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Singledetailhead ends here */
+
+@media screen and (max-width:480px) {
+  .singleDetail-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* SingleDetail ends here  */
+
+/* SubscribeForm */
+.SubscribeForm {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.rightForm-text {
+  text-align: center;
+  line-height: 24px;
+}
+
+.boldForm-text {
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0;
+}
+
+.Form-text {
+  font-size: 18px;
+  color: #979c9c;
+  margin: 2px;
+}
+
+.SubscribeForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.SubscribeForm form input {
+  height: 60px;
+  width: 250px;
+  padding: 0 25px;
+  font-size: 17px;
+  border: 2px solid #FED319;
+  outline: none;
+}
+
+.submitbutton {
+  background-color: #FED319;
+  font-weight: bold;
+}
+
+.Form-small-text {
+  font-size: 16px;
+  color: #979c9c;
+  margin: 0;
+  line-height: 18px;
+}
+
+/*SubscribeForm ends here  */
+
+/* SearchPage */
+.searchPage{
+  display:flex;
+  flex-direction: column;
+}
+/* SearchPage ends here */
+
+/* ReleaseSectionContain */
+ .scrabbedData{
+  display:flex;
+  flex-wrap: wrap;
+  gap:30px;
+ }
+ .scrabbedData .ScrabbedCards{
+  flex:30%
+ }
+ .scrabbedData .ScrabbedCards .img-holder{
+  width:100%;
+  height:70%;
+ }
+
+ @media screen and (max-width:480px){
+  .scrabbedData{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:30px;
+   }
+ }
+/* ReleaseSectionContain ends here */

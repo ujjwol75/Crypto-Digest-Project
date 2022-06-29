@@ -1,21 +1,32 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { FaSearch } from 'react-icons/fa';
+import { ImCross } from 'react-icons/im';
 import { BiMenu } from 'react-icons/bi';
-import { APIs} from '../../pages/api/hello';
+import { APIs } from '../../pages/api/hello';
 import useGetHook from '../customHooks/useGetHooks';
 
 function Header() {
     const [showNav, setshowNav] = useState(false);
     const [showSearch, setshowSearch] = useState(false);
-    const { isLoading:navigationLoading, data: navigationListData } = useGetHook(
+    const [name, setName] = useState("");
+    const router = useRouter();
+
+    const { isLoading: navigationLoading, data: navigationListData } = useGetHook(
         {
             queryKey: 'navigationListData',
             url: APIs?.navigation
         }
     );
 
-    // console.log( navigationListData)
+    function HandleSubmit(e) {
+        e.preventDefault();
+        router.push(`/searchPage/${name}`);
+        setName("");
+    }
+    console.log('name', name)
+
     return (
         <div className="header container">
             <div className="logo">
@@ -83,7 +94,8 @@ function Header() {
                     </ul>
                 </div>
                 <button className='searchbutton'>
-                    <FaSearch className='search' onClick={() => setshowSearch(!showSearch)} />
+                    {showSearch ? <ImCross onClick={() => setshowSearch(!showSearch)} /> :
+                        <FaSearch className='search' onClick={() => setshowSearch(!showSearch)} />}
                 </button>
                 <div className="hamburger" onClick={() => setshowNav(!showNav)}>
                     <BiMenu />
@@ -91,8 +103,10 @@ function Header() {
             </div>
             {/* for search input */}
             <div className={showSearch ? "searchInputOn" : "searchInputoff"}>
-                <form action="">
-                    <input type="text" placeholder='Search...' />
+                <form onSubmit={HandleSubmit}>
+                    <input type="text" placeholder='Search...' value={name} onChange={(e) => setName(e.target.value)} />
+                    <button className='searchbutton' type='submit' style={{ "opacity": "0.5" }}>
+                        <FaSearch className='search' /></button>
                 </form>
             </div>
             {/* for seach input ends here */}
