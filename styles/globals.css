@@ -17,7 +17,7 @@ a {
 
 .container {
   padding: 20px 100px;
-  max-width: 1349px;
+  width: 1349px;
   margin: auto;
 }
 
@@ -170,6 +170,118 @@ h2 {
   padding: 25px;
 }
 
+/* resposive breakpoint 1024px */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 1024px;
+    padding: 10px 30px;
+  }
+
+  /* header section */
+  .header {
+    height: 6rem;
+  }
+
+  .logo {
+    flex: 15%;
+    padding: 12px 0;
+  }
+
+  .navbar {
+    flex: 70%;
+  }
+}
+
+/* resposive breakpoint 1024px ends here */
+
+/* responsive breakpoint 995px */
+@media screen and (max-width: 995px) {
+  .container {
+    width: 995px;
+  }
+
+  .header ul {
+    gap: 5px;
+    padding-left: 10px;
+  }
+
+  .header ul li {
+    padding: 5px 5px 5px;
+  }
+}
+
+/* responsive breakpoint 995px ends here */
+
+/* break point 768px */
+@media screen and (max-width:768px) {
+  .container {
+    width: 846px;
+  }
+
+  .logo {
+    flex: 20%;
+    align-items: center;
+    padding: 0;
+  }
+
+  .logo .img-holder {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .navbar {
+    flex: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header .n-list {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex: 100%;
+    flex-direction: column;
+    position: absolute;
+    z-index: 5;
+    top: 93px;
+    right: 0;
+  }
+
+  .mobile-menu>ul {
+    flex-direction: column;
+    list-style-type: none;
+    gap: 10px;
+    background: #3B3B3B;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 687px;
+  }
+
+  .header ul li {
+    padding: 15px 8px 15px;
+    border-bottom: 1px solid #D6D5D5;
+  }
+
+  .header ul li:nth-child(1) {
+    border-top: 1px solid #D6D5D5;
+  }
+
+  .mobile-menu>ul>li .hamburger {
+    padding-right: 10px;
+  }
+}
+
+/* break point 768px ends here */
+
+/* break point 480px */
 @media screen and (max-width:480px) {
   .container {
     padding: 4px 5px;
@@ -231,6 +343,8 @@ h2 {
   }
 }
 
+/* break point 480px ends here */
+
 /* header ends here */
 
 /* Navigation */
@@ -259,6 +373,14 @@ ul.headlist-wrappper li:hover a {
   border-bottom: 1px solid black;
 }
 
+/* reponsive break point 768px */
+@media screen and (max-width:768px) {
+  .navigation {
+    padding: 1px 0 !important;
+  }
+}
+
+/* responsive breakpoit  480px */
 @media screen and (max-width:480px) {
   .navigation {
     padding: 5px 20px;
@@ -393,7 +515,8 @@ ul.headlist-wrappper li:hover a {
   color: #fff
 }
 
-@media screen and (max-width:480px) {
+/* responsive breakpoint 768 */
+@media screen and (max-width:768px) {
   .bannerlower {
     flex-direction: column;
   }
@@ -496,7 +619,7 @@ iframe {
   padding: 0 !important;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
   .homeCrypttoNews-right {
     flex: 100%;
     border: none;
@@ -607,7 +730,7 @@ h5 {
   flex: 20%;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
   .releaseSection {
     flex-direction: column;
   }
@@ -689,7 +812,7 @@ h5 {
   max-height: 100px;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
   .cryptoProjectSection {
     flex-direction: column;
   }
@@ -812,7 +935,7 @@ ul.footerlinks {
   font-weight: 300;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
   .cryptoNewsWrapper {
     flex-direction: column;
   }
@@ -1002,7 +1125,7 @@ ul.footerlinks {
 
 /* rate ends here */
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
   .MarginTraddingWrapper {
     flex-direction: column;
   }
@@ -1032,10 +1155,29 @@ ul.footerlinks {
   font-weight: bold;
 }
 
+.singleDetailCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding:20px 0;
+}
+
+.singleDetailCards .ScrabbedCards {
+  flex: 30%;
+}
+
+.singleDetailCards .ScrabbedCards .img-holder {
+  width: 100%;
+  height: 60%;
+}
+
 /* Singledetailhead ends here */
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
   .singleDetail-wrapper {
+    flex-direction: column;
+  }
+  .singleDetailCards {
     flex-direction: column;
   }
 }
@@ -1098,32 +1240,36 @@ ul.footerlinks {
 /*SubscribeForm ends here  */
 
 /* SearchPage */
-.searchPage{
-  display:flex;
+.searchPage {
+  display: flex;
   flex-direction: column;
 }
+
 /* SearchPage ends here */
 
 /* ReleaseSectionContain */
- .scrabbedData{
-  display:flex;
+.scrabbedData {
+  display: flex;
   flex-wrap: wrap;
-  gap:30px;
- }
- .scrabbedData .ScrabbedCards{
-  flex:30%
- }
- .scrabbedData .ScrabbedCards .img-holder{
-  width:100%;
-  height:70%;
- }
+  gap: 30px;
+}
 
- @media screen and (max-width:480px){
-  .scrabbedData{
-    display:flex;
+.scrabbedData .ScrabbedCards {
+  flex: 30%
+}
+
+.scrabbedData .ScrabbedCards .img-holder {
+  width: 100%;
+  height: 70%;
+}
+
+@media screen and (max-width:768px) {
+  .scrabbedData {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap:30px;
-   }
- }
+    gap: 30px;
+  }
+}
+
 /* ReleaseSectionContain ends here */

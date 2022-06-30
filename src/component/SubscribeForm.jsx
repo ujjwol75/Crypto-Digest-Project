@@ -12,7 +12,7 @@ function SubscribeForm() {
             </div>
             <form action="">
                 <input type="text" placeholder='Your email address' />
-                <input type="submit" value={"SING ME UP"} className='submitbutton' />
+                <input type="submit" value={"SIGN ME UP"} className='submitbutton' />
                 <div className="rightForm-text">
                     <p className='Form-small-text'>We NEVER send spam.You can unsubscribe at any time.</p>
                 </div>

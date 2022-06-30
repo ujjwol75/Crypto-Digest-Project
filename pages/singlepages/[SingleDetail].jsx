@@ -19,7 +19,7 @@ function SingleDetail() {
 
   return (
    <>
-     <SingleDetailWrapper/>
+     <SingleDetailWrapper singlePostsData={singlePostsData}/>
    </>
   )
 }
