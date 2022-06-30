@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { GoPrimitiveDot } from 'react-icons/go';
 import ScrabbedCards from '../scrabbedData/ScrabbedCards';
 import useGetHook from '../../customHooks/useGetHooks';

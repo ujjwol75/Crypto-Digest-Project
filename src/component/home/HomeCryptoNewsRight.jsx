@@ -1,4 +1,5 @@
 import React from 'react'
+import SubscribeForm from '../SubscribeForm'
 import HomeCryptoNewsRightContains from './HomeCryptoNewsRightContains'
 
 function HomeCryptoNewsRight() {
@@ -86,6 +87,9 @@ function HomeCryptoNewsRight() {
             pictures="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/thumbs/Untitled-design-5-3flj1bk50sk0twxpm2huru.jpg"
             text="Our Ambition is to Become the Amazon of Crypto: Interview with Coinbase’s Guillaume Chatain"
           />
+
+          <SubscribeForm/>
+          
         </div>
     </>
   )
