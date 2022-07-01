@@ -2,7 +2,7 @@ import React from 'react'
 import SubscribeForm from '../SubscribeForm'
 import HomeCryptoNewsRightContains from './HomeCryptoNewsRightContains'
 
-function HomeCryptoNewsRight() {
+function HomeCryptoNewsRight({postsData}) {
   return (
     <>
     <div className="socialmedia">
@@ -54,40 +54,18 @@ function HomeCryptoNewsRight() {
         </div>
         <div className="cryptoNewsRightImages">
           <div className="img-holder">
-            <img src="https://servedbyadbutler.com/getad.img/;libID=3508747" alt="" />
+            <img src={postsData?.results[5]?.image} alt="" />
           </div>
           <div className='short-title'>
             <span>Editorials</span>
           </div>
-          <HomeCryptoNewsRightContains
-            pictures={"https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/thumbs/nft-3fvjahrw6z1p4kb0gnso3u.jpg"}
-            text="Over 33% of NFT Volume is Wash Trading: bitsCrunch CEO Interview"
-          />
-          <HomeCryptoNewsRightContains
-            pictures="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/thumbs/celsius_cover-3e8ozll6x5kspz8h4sgcne.jpg"
-            text="What’s Going on With Celsius Network and Why Is It a Huge Risk for Crypto (Opinion)"
-          />
-          <HomeCryptoNewsRightContains
-            pictures="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/thumbs/ConsenSys-min-3c4dxwih6hvsz33cdoi70q.jpg"
-            text="Institutions Are Definitely Here: ConsenSys’ Harriet Browning (Interview)"
-          />
-          <HomeCryptoNewsRightContains
-            pictures="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/thumbs/binance_visa_card-3fnly2z2ynrr525hh11gqy.jpg"
-            text="Binance Visa Card Guide: Read Before You Order"
-          />
-          <HomeCryptoNewsRightContains
-            pictures="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/thumbs/Jean-Baptiste-Graftieaux-3fl9rjgugfvnilgqp60nbe.jpg"
-            text="Bitstamp CEO JB Graftieaux: We Are Still Early (Interview)"
-          />
-          <HomeCryptoNewsRightContains
-            pictures="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/thumbs/okaybears_cover-3fn596tgklewl1xzuehfre.jpg"
-            text="Okay Bears NFT Collection: The Complete Guide"
-          />
-          <HomeCryptoNewsRightContains
-            pictures="https://cdn.shortpixel.ai/spai/w_300+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/thumbs/Untitled-design-5-3flj1bk50sk0twxpm2huru.jpg"
-            text="Our Ambition is to Become the Amazon of Crypto: Interview with Coinbase’s Guillaume Chatain"
-          />
-
+ 
+          {postsData?.results?.map((item,key)=>
+             <HomeCryptoNewsRightContains
+             pictures={item.image}
+             text={item.slug}
+           />
+          )}
           <SubscribeForm/>
           
         </div>

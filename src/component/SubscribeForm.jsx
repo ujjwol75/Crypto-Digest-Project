@@ -31,12 +31,11 @@ function SubscribeForm() {
       };
 
     const [formValue, setFormValue] = useState("");
-    const handleForm = () => {
-        console.log("hello");
-    };
+    
     const handleClick = (e) => {
-        e.preventDefault()
-        handleNewsLetterClick(formValue)
+        e.preventDefault();
+        handleNewsLetterClick(formValue);
+        setFormValue("");
     };
 
     return (
@@ -48,7 +47,7 @@ function SubscribeForm() {
                 <p className='boldForm-text'>One Weekly Email Can Change Your Crypto Life.</p>
                 <p className='Form-text'>Sign-up FREE to receive our extended weekly market update and coin analysis report</p>
             </div>
-            <form action="" onSubmit={handleForm}>
+            <form action="" onSubmit={handleClick}>
                 <input type="email" placeholder='Your email address'
                  handleNewsLetterClick={handleNewsLetterClick}
                  value={formValue}

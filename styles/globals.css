@@ -319,7 +319,7 @@ ul.headlist-wrappper li:hover a {
 /* responsive breakpoit  480px */
 @media screen and (max-width:480px) {
   .navigation {
-    padding: 5px 20px;
+    padding: 5px 20px!important;
     display: flex;
     justify-content: flex-start;
     height: 4rem;
@@ -660,12 +660,11 @@ h5 {
 .releaseSection {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  padding:10px 0;
 }
 
-.releaseSectionContain {
-  flex: 20%;
-}
-
+/* breakpoint 768px */
 @media screen and (max-width:768px) {
   .releaseSection {
     flex-direction: column;
@@ -676,16 +675,21 @@ h5 {
 /* LoadMoreCryptoNews ends here */
 
 /* ReleaseSectionContain */
-.releaseSectionContain .img-holder {
-  height: 115px;
-}
 
+.releaseSectionContain {
+  flex: 20%;
+}
+.releaseSectionContain .img-holder{
+  width:100%;
+  height:40%;
+}
 /* ReleaseSectionContain ends */
 
 /* PriceAnalysis section */
 .priceAnalysisSection {
   display: flex;
-  gap: 30px
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 /* PriceAnalysis */
@@ -697,7 +701,8 @@ h5 {
 }
 
 .priceAnalysis .img-holder {
-  height: 115px;
+  height:120px;
+  width:100%;
 }
 
 .analysisdate {
@@ -828,7 +833,7 @@ ul.footerlinks {
   color: #919191;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
   .footer-wrapper {
     flex-direction: column;
     font-size: 18px;

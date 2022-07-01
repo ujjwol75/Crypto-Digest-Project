@@ -34,13 +34,13 @@ function HomeCryptoNews() {
           </Link> 
          )}
 
-        <LoadMoreCryptoNews/>
+        <LoadMoreCryptoNews postsData={postsData}/>
       </div>
       {/*homeCryptoNews-left ends here  */}
 
 
       <div className="homeCrypttoNews-right">
-        <HomeCryptoNewsRight/>
+        <HomeCryptoNewsRight postsData={postsData}/>
       </div>
     </div >
   )
