@@ -21,15 +21,15 @@ function HomeCryptoNews() {
         <h2 style={{ 'color': 'black' }}>Crypto News</h2>
 
          {postsData?.results?.map((item, key)=>
-         <Link href={`/singlepages/${item.id}`}>
-          <a>
+         <Link href={`/singlepages/${item.slug}`}>
+          <div className="newsContains-wrapper">
           <HomeCrytoNewsContains
              pictures={item.image}
              date={item.created}
              newsTitle={item.title}
              newsText={item.description}
            />
-          </a>
+          </div>
 
           </Link> 
          )}

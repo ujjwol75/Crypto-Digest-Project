@@ -40,6 +40,19 @@ h2 {
 .small-h2 {
   font-size: 16px;
 }
+.categoriesHead{
+  font-size:18px;
+}
+@media screen and (max-width:768px) {
+  
+h2 {
+  font-size: 50px;
+}
+
+.small-h2 {
+  font-size: 25px;
+}
+}
 
 /* header  */
 .header {
@@ -482,7 +495,6 @@ ul.headlist-wrappper li:hover a {
 }
 
 .newsContains-left .img-holder {
-  width: 220px;
   height: 140px
 }
 
@@ -578,11 +590,11 @@ iframe {
 }
 
 .newsContains-left {
-  flex: 25%;
+  flex:30%;
 }
 
 .newsContains-right {
-  flex: 75%;
+  flex: 70%;
 }
 
 .newsContains-right span {
@@ -599,7 +611,23 @@ h3 {
   color: #5a5a56;
   margin: 2px 0;
 }
-
+@media screen and (max-width:768px) {
+  .newsContains-wrapper{
+    flex-direction: column;
+  }
+  .newsContains-left .img-holder {
+    height: 200px
+  }
+  .newsContains-right span {
+    font-size:25px;
+  }
+  h3{
+    font-size:30px;
+  }
+  .small-text{
+    font-size:25px;
+  }
+}
 /* HomeCryptoNewsContains ends here  */
 
 /* HOmeCryptoNewsRightContains */
@@ -625,7 +653,9 @@ h5 {
   font-weight: bold;
   font-size: 18px;
 }
-
+ @media screen and (max-width:768px){
+   .short-title{font-size:30px}
+ }
 /* HOmeCryptoNewsRightContains ends */
 
 /* LoadMoreCryptoNews */
@@ -681,7 +711,7 @@ h5 {
 }
 .releaseSectionContain .img-holder{
   width:100%;
-  height:40%;
+  height:200px;
 }
 /* ReleaseSectionContain ends */
 
@@ -729,7 +759,7 @@ h5 {
 }
 
 /* PriceAnalysis ends here */
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
   .priceAnalysisSection {
     flex-direction: column;
   }
@@ -749,8 +779,7 @@ h5 {
 }
 
 .cryptoProjectSection .newsContains-left .img-holder {
-  max-width: 120px;
-  max-height: 100px;
+  height: 200px;
 }
 
 @media screen and (max-width:768px) {
@@ -832,7 +861,7 @@ ul.footerlinks {
   font-size: 14px;
   color: #919191;
 }
-
+/* breakpoint 768px responsive */
 @media screen and (max-width:768px) {
   .footer-wrapper {
     flex-direction: column;
@@ -875,7 +904,19 @@ ul.footerlinks {
   color: #5a5a56;
   font-weight: 300;
 }
-
+.pagination{
+  display:flex;
+  gap:10px;
+  justify-content: center;
+  justify-items: center;
+  font-size:50px;
+}
+.paginationLeft, .paginationRight{
+  color:#322e2e;
+}
+.paginationLeft:hover, .paginationRight:hover{
+  color:#FED319;
+}
 @media screen and (max-width:768px) {
   .cryptoNewsWrapper {
     flex-direction: column;
@@ -1178,6 +1219,31 @@ ul.footerlinks {
   line-height: 18px;
 }
 
+@media screen and (max-width:768px){
+  .SubscribeForm {
+    gap:30px;
+  }
+  .rightForm-text {
+    line-height: 30px;
+  }
+  .boldForm-text{
+    font-size:30px;
+  }
+  .Form-text {
+    font-size:25px;
+  }
+  .Form-small-text{
+    font-size: 20px;
+  }
+  .SubscribeForm form {
+    gap:20px;
+  }
+  .SubscribeForm form input {
+    height: 80px;
+    width: 400px;
+    font-size: 25px;
+  }
+}
 /*SubscribeForm ends here  */
 
 /* SearchPage */
@@ -1211,6 +1277,7 @@ ul.footerlinks {
     flex-wrap: wrap;
     gap: 30px;
   }
+  
 }
 
 /* ReleaseSectionContain ends here */

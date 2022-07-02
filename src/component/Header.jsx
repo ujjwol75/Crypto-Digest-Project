@@ -69,11 +69,6 @@ function Header() {
                             </div>
                         </li>
                         <li>
-                            <Link href="/defi">
-                                DeFi &#38; NFT
-                            </Link>
-                        </li>
-                        <li>
                             <Link href="/buy">
                                 Buy
                             </Link>
@@ -90,6 +85,11 @@ function Header() {
                                 <a href="#">Link 2</a>
                                 <a href="#">Link 3</a>
                             </div>
+                        </li>
+                        <li>
+                            <Link href="/contact">
+                                Contact Us
+                            </Link>
                         </li>
                     </ul>
                 </div>

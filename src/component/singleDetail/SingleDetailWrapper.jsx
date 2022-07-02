@@ -2,17 +2,25 @@ import React from 'react';
 import Link from 'next/link';
 import HomeCryptoNewsRight from '../home/HomeCryptoNewsRight';
 import Singledetailhead from './Singledetailhead';
+import useGetHook from '../../customHooks/useGetHooks';
+import { APIs } from '../../../pages/api/hello';
 
-
-function SingleDetailWrapper({singlePostsData}) {
+function SingleDetailWrapper({singlePostsData}){
 
     // console.log(`hgjhg${SingleDetail}`)
     // console.log(`${APIs.posts}${SingleDetail}`);
 
     // console.log("aiiiii",singlePostsData);
 
-    // console.log("singlePostsData",singlePostsData)
+    console.log("singlePostsData",singlePostsData)
 
+    const { isLoading:postsLoading, data: postsData } = useGetHook(
+        {
+            queryKey: 'postsData',
+            url: APIs?.posts
+        }
+    );
+    // console.log(postsData)
     return (
         <div className="singleDetail-wrapper container">
             <div className="homeCryptoNews-left">
@@ -40,7 +48,7 @@ function SingleDetailWrapper({singlePostsData}) {
                     />
             </div>
             <div className="homeCrypttoNews-right">
-                <HomeCryptoNewsRight />
+            <HomeCryptoNewsRight postsData={postsData}/>
             </div>
         </div>
     )

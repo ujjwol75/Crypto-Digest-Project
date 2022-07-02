@@ -23,16 +23,18 @@ function Homebanner() {
     return (
         <div className="homebanner container">
             <div className="bannerupper">
-                <div className="img-holder" style={{ "height": "10rem" }}>
-                    <img src={bannerImageData?.results[0]?.image} alt="" />
-                    {/* <img src="https://servedbyadbutler.com/getad.img/;libID=3508746" alt=" images" /> */}
-                </div>
+                <Link href={`/singlepages/${postsData?.results[0]?.slug}`}>
+                    <div className="img-holder" style={{ "height": "10rem" }}>
+                        <img src={bannerImageData?.results[0]?.image} alt="" />
+                        {/* <img src="https://servedbyadbutler.com/getad.img/;libID=3508746" alt=" images" /> */}
+                    </div>
+                </Link>
             </div>
             {/* bannerupper ends here */}
 
             <div className="bannerlower">
                 <div className="bannerlower-left">
-                    <Link href={`/singlepages/${postsData?.results[0]?.id}`}>
+                    <Link href={`/singlepages/${postsData?.results[0]?.slug}`}>
                         <div className="img-holder2 banner-img">
                             <img src={postsData?.results[0]?.image} alt="" />
                             <div className="post-content">
@@ -45,33 +47,39 @@ function Homebanner() {
 
                 <div className="bannerlower-right">
                     <div className="bannerlower-right-top">
-                        <div className="img-holder3 banner-img">
-                            <img src={postsData?.results[1]?.image} alt="" />
-                            <div className="post-content">
-                                <h2>{postsData?.results[1]?.title}</h2>
-                                <span>{postsData?.results[1]?.created}</span>
+                        <Link href={`/singlepages/${postsData?.results[0]?.slug}`}>
+                            <div className="img-holder3 banner-img">
+                                <img src={postsData?.results[1]?.image} alt="" />
+                                <div className="post-content">
+                                    <h2>{postsData?.results[1]?.title}</h2>
+                                    <span>{postsData?.results[1]?.created}</span>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
 
                     <div className="bannerlower-right-bottom">
                         <div className="bannerlower-right-bottom-left">
+                        <Link href={`/singlepages/${postsData?.results[0]?.slug}`}>
                             <div className="img-holder4 banner-img">
-                            <img src={postsData?.results[2]?.image} alt="" />
+                                <img src={postsData?.results[2]?.image} alt="" />
                                 <div className="post-content">
-                                <h2>{postsData?.results[2]?.title}</h2>
-                                <span>{postsData?.results[2]?.created}</span>
+                                    <h2>{postsData?.results[2]?.title}</h2>
+                                    <span>{postsData?.results[2]?.created}</span>
                                 </div>
                             </div>
+                        </Link>    
                         </div>
                         <div className="bannerlower-right-bottom-right">
+                        <Link href={`/singlepages/${postsData?.results[0]?.slug}`}>
                             <div className="img-holder5 banner-img">
-                            <img src={postsData?.results[3]?.image} alt="" />
+                                <img src={postsData?.results[3]?.image} alt="" />
                                 <div className="post-content">
-                                <h2>{postsData?.results[3]?.title}</h2>
-                                <span>{postsData?.results[3]?.created}</span>
+                                    <h2>{postsData?.results[3]?.title}</h2>
+                                    <span>{postsData?.results[3]?.created}</span>
                                 </div>
                             </div>
+                        </Link>    
                         </div>
                     </div>
                 </div>

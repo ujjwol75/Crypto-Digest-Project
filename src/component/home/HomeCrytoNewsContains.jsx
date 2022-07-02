@@ -2,7 +2,7 @@ import React from 'react';
 
 function HomeCrytoNewsContains( props) {
   return (
-     <div className="newsContains-wrapper">
+     <>
       <div className="newsContains-left">
         <div className="img-holder banner-img">
           <img src={props.pictures} alt="" />
@@ -13,7 +13,7 @@ function HomeCrytoNewsContains( props) {
         <h3>{props.newsTitle}</h3>
         <p className='small-text'>{props.newsText}</p>
       </div>
-     </div>
+     </>
   )
 }
 

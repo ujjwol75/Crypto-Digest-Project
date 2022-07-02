@@ -16,40 +16,52 @@ function LoadMoreCryptoNews({ postsData }) {
           <span>Press Releases</span>
         </div>
         <div className="releaseSection">
-          {postsData?.results?.slice(0,4).map((item, key) =>
+          {postsData?.results?.slice(0, 4).map((item, key) =>
+            <Link href={`/singlepages/${item.slug}`}>
+              <div className="releaseSectionContain">
                 <ReleaseSectionContain
                   pictures={item.image}
                   caption={item.title}
                 />
+              </div>
+            </Link>
           )}
         </div>
         <div className='short-title bigsize' style={{ margin: 0 }}>
-          <span>Crypto Price Analysis</span>
+          <span className='categoriesHead'>Crypto Price Analysis</span>
         </div>
 
         <div className="priceAnalysisSection">
-          {postsData?.results?.slice(4,8).map((item, key) =>
+          {postsData?.results?.slice(4, 8).map((item, key) =>
+            <Link href={`/singlepages/${item.slug}`}>
+              <div className="priceAnalysis">
                 <PriceAnalysis
                   date={item.created}
                   pricehead={item.name}
                   pictures={item.image}
                   caption={item.title}
                 />
+              </div>
+            </Link>
           )}
         </div>
 
         <div className='short-title bigsize' style={{ margin: 0 }}>
-          <span>Crypto Projects</span>
+          <span className='categoriesHead'>Crypto Projects</span>
         </div>
 
         <div className="cryptoProjectSection">
-          {postsData?.results?.slice(0,6).map((item, key) =>
-          <HomeCrytoNewsContains
-            pictures={item.image}
-            date={item.created}
-            newsTitle={item.title}
-          />
-        )}
+          {postsData?.results?.slice(0, 6).map((item, key) =>
+            <Link href={`/singlepages/${item.slug}`}>
+              <div className="newsContains-wrapper">
+                <HomeCrytoNewsContains
+                  pictures={item.image}
+                  date={item.created}
+                  newsTitle={item.title}
+                />
+              </div>
+            </Link>
+          )}
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 function Navigation() {
-  return (
+  return ( 
     <div className="navigation container">
         <ul className='headlist-wrappper'> 
             <li>

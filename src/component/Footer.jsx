@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState} from 'react';
+import {IoIosArrowUp} from 'react-icons/io';
 
 function Footer() {
     return (
@@ -49,7 +50,6 @@ function Footer() {
                 </div>
             </div>
             <p className='copyright'>&copy; COPYRIGHT CRYPTOPOTATO 2016 &nbsp; - 2021</p>
-
         </div>
     )
 }

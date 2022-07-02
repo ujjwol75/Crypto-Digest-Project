@@ -2,7 +2,7 @@ import React from 'react';
 
 function PriceAnalysis(props) {
     return (
-        <div className="priceAnalysis">
+        <>
             <h5>{props.pricehead}</h5>
             <div className="img-holder banner-img">
                 <img src={props.pictures} alt="" />
@@ -11,9 +11,9 @@ function PriceAnalysis(props) {
                 </div>
             </div>
             <div className="priceAnalysis-caption">
-                <h4>{props.caption}</h4>
+                <h4 className='small-text'>{props.caption}</h4>
             </div>
-        </div>
+        </>
     )
 }
 

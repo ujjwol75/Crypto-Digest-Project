@@ -15,6 +15,7 @@ function SingleDetail() {
     url: `${APIs.posts}${SingleDetail}`,
   });
   // {curElem?.slice(0,5)}
+  console.log('first')
   console.log('singlepostdata', singlePostsData)
 
   return (
