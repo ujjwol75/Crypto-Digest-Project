@@ -48,35 +48,34 @@ function Header() {
                                 </Link>
                             </li>
                         )} */}
+                        <Link href="/cryptoNews">
                         <li>
-                            <Link href="/cryptoNews">
                                 Crypto News
-                            </Link>
                         </li>
+                        </Link>
+                        <Link href="/margintrading">
                         <li>
-                            <Link href="/margintrading">
                                 Margin Trading
-                            </Link>
                         </li>
+                        </Link>
+                        <Link href="/guides">
                         <li className='dropdown'>
-                            <Link href="/guides">
                                 Guides
-                            </Link>
                             <div className='dropdown-content'>
                                 <Link href="/abc">Bitcoins &#38; Cryptoguides 101</Link>
                                 <a href="#">Bitcoins For Beginners</a>
                                 <a href="#">Editorials</a>
                             </div>
                         </li>
+                        </Link>
+                        <Link href="/buy">
                         <li>
-                            <Link href="/buy">
                                 Buy
-                            </Link>
                         </li>
+                        </Link>
+                        <Link href="/language ">
                         <li className='dropdown'>
-                            <Link href="/language ">
                                 Language
-                            </Link>
                             <div className='dropdown-content'>
                                 <a href="#">Link 1</a>
                                 <a href="#">Link 2</a>
@@ -86,11 +85,12 @@ function Header() {
                                 <a href="#">Link 3</a>
                             </div>
                         </li>
+                        </Link>
+                        <Link href="/contact">
                         <li>
-                            <Link href="/contact">
                                 Contact Us
-                            </Link>
                         </li>
+                        </Link>
                     </ul>
                 </div>
                 <button className='searchbutton'>
