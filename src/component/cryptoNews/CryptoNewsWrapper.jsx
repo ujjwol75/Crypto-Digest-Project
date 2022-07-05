@@ -59,7 +59,7 @@ function CryptoNewsWrapper() {
       </div>
       <div className="homeCrypttoNews-right">
         <HomeCryptoNewsRight postsData={postsData} />
-        <SubscribeForm />
+        <SubscribeForm/>
       </div>
     </div>
   )

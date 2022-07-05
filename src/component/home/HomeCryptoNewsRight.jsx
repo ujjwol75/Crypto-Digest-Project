@@ -1,9 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import SubscribeForm from '../SubscribeForm'
 import HomeCryptoNewsRightContains from './HomeCryptoNewsRightContains'
 
-function HomeCryptoNewsRight({ postsData }) {
+function HomeCryptoNewsRight({postsData}){
   return (
     <>
       <div className="socialmedia">
@@ -74,8 +73,6 @@ function HomeCryptoNewsRight({ postsData }) {
             </a>
           </Link>
         )}
-        <SubscribeForm />
-
       </div>
     </>
   )

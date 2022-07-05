@@ -5,6 +5,7 @@ import HomeCrytoNewsContains from './HomeCrytoNewsContains';
 import LoadMoreCryptoNews from './LoadMoreCryptoNews';
 import useGetHook from '../../customHooks/useGetHooks';
 import { APIs } from '../../../pages/api/hello';
+import SubscribeForm from '../SubscribeForm';
 
 function HomeCryptoNews() {
   const { isLoading:postsLoading, data: postsData } = useGetHook(
@@ -41,6 +42,7 @@ function HomeCryptoNews() {
 
       <div className="homeCrypttoNews-right">
         <HomeCryptoNewsRight postsData={postsData}/>
+        <SubscribeForm/>
       </div>
     </div >
   )

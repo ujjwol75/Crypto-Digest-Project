@@ -1,28 +1,28 @@
 import React from 'react';
-import useGetHook from '../../src/customHooks/useGetHooks';
 import { APIs } from '../api/hello';
-import { useRouter } from 'next/router';
 import SingleDetailWrapper from '../../src/component/singleDetail/SingleDetailWrapper';
+import {getApiData} from "../../src/helper/AxiosInstance";
 
 
-function SingleDetail() {
-  const router = useRouter();
-  const { SingleDetail } = router?.query
-  console.log(SingleDetail);
-
-  const { isLoading: singlePostsLoading, data: singlePostsData } = useGetHook({
-    queryKey: `singlePostsData-${SingleDetail}`,
-    url: `${APIs.posts}${SingleDetail}`,
-  });
-  // {curElem?.slice(0,5)}
-  console.log('first')
-  console.log('singlepostdata', singlePostsData)
+function SingleDetail(props) {
 
   return (
    <>
-     <SingleDetailWrapper singlePostsData={singlePostsData}/>
+     <SingleDetailWrapper singlePostsData={props?.singlePost}/>
    </>
   )
 }
 
 export default SingleDetail;
+
+
+export async function getServerSideProps({params}) {
+  const {SingleDetail} = params
+  const url = `${APIs.posts}${SingleDetail}`
+  const singlePost = await getApiData(url)
+  return {
+    props: {
+      singlePost: singlePost?.data
+    }, // will be passed to the page component as props
+  }
+}

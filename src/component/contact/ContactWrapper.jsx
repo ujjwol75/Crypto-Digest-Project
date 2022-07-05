@@ -59,23 +59,23 @@ console.log("handlecontact",contactformValue);
           <input type="text" placeholder='Full Name' className='user' 
           id='name'
           value={contactformValue.name}
-          onChange={(e)=>setContactFormValue(e.target.value)}
+          onChange={(e)=>setContactFormValue((prev)=>({...prev, name:e.target.value}))}
           />
           <input type="email" placeholder='Email' className='user' 
           id='email'
            handlecontact={handlecontact}
            value={contactformValue.email}
-           onChange={(e)=>setContactFormValue(e.target.value)}
+           onChange={(e)=>setContactFormValue((prev)=>({...prev, email:e.target.value}))}
           />
           <input type="phone" placeholder='Phone Number' className='user' 
           id='phone'
           value={contactformValue.phone}
-          onChange={(e)=>setContactFormValue(e.target.value)}
+          onChange={(e)=>setContactFormValue((prev)=>({...prev,phone:e.target.value}))}
           />
           <textarea type="text-area" placeholder='Message.....' className='user' 
           id='message'
           value={contactformValue.message}
-          onChange={(e)=>setContactFormValue(e.target.value)}
+          onChange={(e)=>setContactFormValue((prev)=>({...prev,message:e.target.value}))}
           />
           <input type="submit" className='contact-submit' onClick={handleClick}/>
         </form>

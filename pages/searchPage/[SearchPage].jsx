@@ -1,25 +1,23 @@
 import React from 'react';
-import useGetHook from '../../src/customHooks/useGetHooks';
 import { APIs } from '../api/hello';
-import { useRouter } from 'next/router';
+import {getApiData} from "../../src/helper/AxiosInstance";
 import SearchPageWrapper from '../../src/component/searchpage/SearchPageWrapper';
 
-function SearchPage() {
-    const router = useRouter();
-    const { SearchPage } = router?.query
-
-    // console.log('SearchPage', SearchPage);
-
-    const { isLoading: searchListLoader, data: searchPageData, isError, } = useGetHook({
-        queryKey: `searchPageData${SearchPage}`,
-        url: `${APIs.posts}?search=${SearchPage}`,
-    });
-
-    // console.log('searchPageData', searchPageData)
-
+function SearchPage(props) {
     return (
-        <SearchPageWrapper data={searchPageData}/>
+        <SearchPageWrapper data={props?.searchPageData}/>
     )
 }
 
 export default SearchPage;
+
+export async function getServerSideProps({params}) {
+    const {SearchPage} = params
+    const url =  `${APIs.posts}?search=${SearchPage}`
+    const searchPageData = await getApiData(url)
+    return {
+      props: {
+        searchPageData: searchPageData?.data
+      }, // will be passed to the page component as props
+    }
+  }
