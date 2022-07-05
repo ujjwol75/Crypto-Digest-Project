@@ -89,6 +89,7 @@ h2 {
 
 .header ul li {
   padding: 5px 8px 5px;
+  cursor:pointer;
 }
 
 .header ul li:hover {
@@ -101,6 +102,7 @@ h2 {
   border: none;
   font-size: 18px;
   color: white;
+  cursor:pointer;
 }
 
 .searchInputoff {
