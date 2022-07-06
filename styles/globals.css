@@ -17,7 +17,7 @@ a {
 
 .container {
   padding: 20px 100px;
-  width: 1349px;
+  max-width: 1350px;
   margin: auto;
 }
 
@@ -181,7 +181,34 @@ h2 {
   display: none;
   padding-left: 25px;
 }
+/* breakpoint 1306px */
+@media screen and (max-width: 1306px){
+.container{
+  width:1306px;
+}
+.logo{
+  flex: 30%;
+}
+.navbar{
+  flex:65%;
+}
+}
+/* breakpoint 1306px ends here */
+/* responsive breakpoint 1200px */
+@media screen and (max-width: 1200px){
+  .container {
+    width: 1200px;
+  }
+  .logo {
+    flex: 25%;
+    padding: 12px 0;
+  }
 
+  .navbar {
+    flex: 70%;
+  }
+} 
+/* responsive breakpoint 1200px ends here */
 /* resposive breakpoint 1024px */
 @media screen and (max-width: 1024px) {
   .container {
@@ -227,7 +254,7 @@ h2 {
 /* break point 768px */
 @media screen and (max-width:768px) {
   .container {
-    width: 846px;
+    width: 768px;
   }
   .header{
     height:10rem;
