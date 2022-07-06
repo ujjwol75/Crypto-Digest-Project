@@ -17,7 +17,7 @@ a {
 
 .container {
   padding: 20px 100px;
-  max-width: 1350px;
+  /* max-width: 1350px; */
   margin: auto;
 }
 
@@ -254,7 +254,7 @@ h2 {
 /* break point 768px */
 @media screen and (max-width:768px) {
   .container {
-    width: 768px;
+    width: 856px;
   }
   .header{
     height:10rem;
