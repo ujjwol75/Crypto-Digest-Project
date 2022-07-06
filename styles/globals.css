@@ -66,7 +66,7 @@ h2 {
 }
 
 .logo {
-  flex: 35%;
+  flex: 24%;
 }
 
 .navbar {
@@ -88,7 +88,7 @@ h2 {
 }
 
 .header ul li {
-  padding: 5px 8px 5px;
+  padding: 5px 14px 5px;
   cursor:pointer;
 }
 
