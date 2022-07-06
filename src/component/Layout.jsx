@@ -3,13 +3,13 @@ import Footer from './Footer';
 import Header from './Header';
 import Navigation from './Navigation';
 
-function Layout({children}){
-    return(
+function Layout({ children }) {
+    return (
         <>
-        <Header/>
-        <Navigation/>
-        {children}
-        <Footer/>
+            <Header />
+            <Navigation />
+            {children}
+            <Footer />
         </>
     );
 }

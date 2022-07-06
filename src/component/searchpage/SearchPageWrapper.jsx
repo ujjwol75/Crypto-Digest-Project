@@ -2,7 +2,7 @@ import React from 'react';
 import LatestCryptoNewsContains from '../cryptoNews/LatestCryptoNewsContains';
 
 function SearchPageWrapper(props) {
-  console.log("abcd",props.data);
+  // console.log("abcd",props.data);
   return (
     <div className="searchPage container">
       {props?.data?.results?.map((item,key)=>
