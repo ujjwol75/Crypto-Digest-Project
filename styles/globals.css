@@ -75,7 +75,7 @@ h2 {
   flex: 65%;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .n-list {
@@ -126,7 +126,7 @@ h2 {
 }
 
 .searchInputOn input {
-  width: 97%;
+  width: 97.2%;
   height: 100%;
   background: black;
   border: none;
@@ -207,6 +207,9 @@ h2 {
   .navbar {
     flex: 70%;
   }
+  .searchInputOn input {
+    width: 97%;
+  }
 } 
 /* responsive breakpoint 1200px ends here */
 /* resposive breakpoint 1024px */
@@ -228,6 +231,12 @@ h2 {
 
   .navbar {
     flex: 70%;
+  }
+  .searchInputOn{
+    padding:0 30px;
+  }
+  .searchInputOn input {
+    width: 96%;
   }
 }
 
@@ -254,7 +263,7 @@ h2 {
 /* break point 768px */
 @media screen and (max-width:768px) {
   .container {
-    width: 856px;
+    width: 768px;
   }
   .header{
     height:10rem;
@@ -308,7 +317,7 @@ h2 {
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    width: 846px;
+    width: 768px;
   }
   .header ul li {
     padding: 15px 8px 15px;
