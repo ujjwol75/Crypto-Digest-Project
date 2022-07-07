@@ -1430,7 +1430,14 @@ textarea{
   font-size:30px;
   color:#FED319;
 }
-/* reponsive breakpoint 768px */
+/* responsive breakpoint 1024 */
+@media screen and (max-width:1024px){
+  .contactWrapper{
+    padding:100px 30px;
+  }
+}
+/*responsive breakpoint 1024 ends here  */
+/* responsive breakpoint 768px */
 @media screen and (max-width:768px){
   .contactWrapper{
     display:flex;
