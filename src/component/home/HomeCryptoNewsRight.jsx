@@ -63,7 +63,7 @@ function HomeCryptoNewsRight({postsData}){
         </div>
 
         {postsData?.results?.map((item, key) =>
-          <Link href={`/singlepages/${postsData?.results[0]?.slug}`}>
+          <Link href={`/singlepages/${postsData?.results[0]?.slug}`} key={key}>
             <a>
               <HomeCryptoNewsRightContains
                 pictures={item.image}

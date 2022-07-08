@@ -22,7 +22,7 @@ function HomeCryptoNews() {
         <h2 style={{ 'color': 'black' }}>Crypto News</h2>
 
          {postsData?.results?.map((item, key)=>
-         <Link href={`/singlepages/${item.slug}`}>
+         <Link href={`/singlepages/${item.slug}`} key={key}>
           <div className="newsContains-wrapper">
           <HomeCrytoNewsContains
              pictures={item.image}

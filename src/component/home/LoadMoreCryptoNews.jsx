@@ -17,7 +17,7 @@ function LoadMoreCryptoNews({ postsData }) {
         </div>
         <div className="releaseSection">
           {postsData?.results?.slice(0, 4).map((item, key) =>
-            <Link href={`/singlepages/${item.slug}`}>
+            <Link href={`/singlepages/${item.slug}`} key={key}>
               <div className="releaseSectionContain">
                 <ReleaseSectionContain
                   pictures={item.image}
@@ -33,7 +33,7 @@ function LoadMoreCryptoNews({ postsData }) {
 
         <div className="priceAnalysisSection">
           {postsData?.results?.slice(4, 8).map((item, key) =>
-            <Link href={`/singlepages/${item.slug}`}>
+            <Link href={`/singlepages/${item.slug}`} key={key}>
               <div className="priceAnalysis">
                 <PriceAnalysis
                   date={item.created}
@@ -52,7 +52,7 @@ function LoadMoreCryptoNews({ postsData }) {
 
         <div className="cryptoProjectSection">
           {postsData?.results?.slice(0, 6).map((item, key) =>
-            <Link href={`/singlepages/${item.slug}`}>
+            <Link href={`/singlepages/${item.slug}`} key={key}>
               <div className="newsContains-wrapper">
                 <HomeCrytoNewsContains
                   pictures={item.image}

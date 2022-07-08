@@ -39,7 +39,7 @@ function CryptoNewsWrapper() {
         <h2 className='thintitle'>The Latest Crypto News</h2>
 
         {paginationData?.results?.map((item, key) =>
-          <Link href={`/singlepages/${item.slug}`}>
+          <Link href={`/singlepages/${item.slug}`} key={key}>
             <a>
               <LatestCryptoNewsContains
                 pictures={item.image}
