@@ -102,7 +102,7 @@ console.log("handlecontact",contactformValue);
               <FiMail className="contantlist-icon"/>
               <div>
                 <p>Email</p>
-                <p>abhilashaduwal@gmail.com</p>
+                <p>abcddummy@gmail.com</p>
               </div>
             </li>
             <li>

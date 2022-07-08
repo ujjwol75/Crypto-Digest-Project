@@ -263,7 +263,7 @@ h2 {
 /* break point 768px */
 @media screen and (max-width:768px) {
   .container {
-    width: 768px;
+    width: 853px;
   }
   .header{
     height:10rem;
@@ -317,7 +317,7 @@ h2 {
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    width: 768px;
+    width: 853px;
   }
   .header ul li {
     padding: 15px 8px 15px;
