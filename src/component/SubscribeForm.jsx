@@ -49,7 +49,6 @@ function SubscribeForm() {
             </div>
             <form action="" onSubmit={handleClick}>
                 <input type="email" placeholder='Your email address'
-                 handleNewsLetterClick={handleNewsLetterClick}
                  value={formValue}
                  onChange={(e)=>setFormValue(e.target.value)}
                 />
