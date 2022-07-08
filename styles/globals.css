@@ -181,9 +181,9 @@ h2 {
   padding-left: 25px;
 }
 /* breakpoint 1306px */
-@media screen and (max-width: 1306px){
+@media screen and (min-width: 1380px){
 .container{
-  width:1306px;
+  width:1380px;
 }
 .logo{
   flex: 30%;
