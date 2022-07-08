@@ -9,7 +9,6 @@ function SearchPage(props) {
     <>
       <Head>
         <title>CryptoPotato - Search</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <SearchPageWrapper data={props?.searchPageData} />
     </>

@@ -9,7 +9,6 @@ function CryptoNews(props) {
     <>
       <Head>
         <title>CryptoPotato - CryptoNews</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
       </Head>
       <CryptoNewsWrapper postsData={props.postsData} />

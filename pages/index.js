@@ -8,7 +8,6 @@ export default function Home() {
   <>
       <Head>
         <title>CryptoPotato - Home</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
       </Head>
      <Homebanner/>
