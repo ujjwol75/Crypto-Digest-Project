@@ -273,6 +273,7 @@ h2 {
   }
   .hamburger{
     font-size:130px;
+    margin-right:-20px;
   }
   .searchbutton{
     font-size:60px;
@@ -1060,7 +1061,22 @@ ul.footerlinks {
   font-size: 32px;
   font-weight: bold;
 }
-
+/* responsive breakpoint 768px */
+@media screen and (max-width:768px) {
+  .margintradingdetailsLinks {
+    font-size:18px;
+  }
+  .marginTrading-profile .img-holder {
+    height:50px;
+    width: 50px;
+  }
+  .marginTrading-profile .profile-text {
+    gap: 10px;
+    font-size: 25px;
+    align-items: center;
+}
+}
+/* responsive breakpoint 768px ends here */
 /* MarginTradingDetails ends here */
 
 /* MarginTradingExchange */
@@ -1236,7 +1252,6 @@ ul.footerlinks {
   width: 100%;
   height: 60%;
 }
-
 /* Singledetailhead ends here */
 
 @media screen and (max-width:768px) {
@@ -1246,8 +1261,13 @@ ul.footerlinks {
   .singleDetailCards {
     flex-direction: column;
   }
+  .singledetailbold-text {
+    font-size: 25px;
+  }
+  .detailText{
+    font-size:25px;
+  }
 }
-
 /* SingleDetail ends here  */
 
 /* SubscribeForm */

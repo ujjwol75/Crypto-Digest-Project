@@ -28,7 +28,7 @@ function Singledetailhead(props) {
 
             <p className='singledetailbold-text'>{props.slug}</p>
 
-            <div
+            <div  className='detailText'
                 dangerouslySetInnerHTML={{
                     __html: props?.content?.slice(0, props.contentlength),
                 }}
