@@ -991,13 +991,17 @@ ul.footerlinks {
   gap:10px;
   justify-content: center;
   justify-items: center;
-  font-size:50px;
+  font-size:40px;
 }
 .paginationLeft, .paginationRight{
   color:#322e2e;
 }
 .paginationLeft:hover, .paginationRight:hover{
   color:#FED319;
+}
+.paginationCount{
+  font-size:20px;
+  line-height: 50px;
 }
 @media screen and (max-width:768px) {
   .cryptoNewsWrapper {

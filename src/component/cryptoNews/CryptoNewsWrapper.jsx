@@ -20,10 +20,10 @@ function CryptoNewsWrapper() {
   // for pagination
   const [page, setPage] = useState(1);
   const previouspage = () => {
-    setPage(page - 1);
+    page>1?setPage(page - 1):setPage(1);
   }
   const nextpage = () => {
-    setPage(page + 1);
+    page<5?setPage(page + 1):setPage(5);
   }
 
   const {data:paginationData}=useGetHook({
@@ -53,6 +53,7 @@ function CryptoNewsWrapper() {
         {/* for pagination */}
         <div className="pagination">
           <div className="paginationLeft" onClick={previouspage}><IoIosArrowDropleft /></div>
+          <span className='paginationCount'>page.....{page}</span>
           <div className="paginationRight" onClick={nextpage}><IoIosArrowDropright /></div>
         </div>
         {/* for pagination ends here*/}
