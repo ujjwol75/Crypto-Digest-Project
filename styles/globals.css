@@ -542,14 +542,20 @@ ul.headlist-wrappper li:hover a {
 @media screen and (max-width:768px) {
   .bannerlower {
     flex-direction: column;
+    gap:30px;
   }
 
   .bannerlower-right {
     flex-direction: column;
+    gap:30px;
   }
 
   .bannerlower-right-bottom {
     flex-direction: column;
+    gap:30px;
+  }
+  .img-holder3, .img-holder4, .img-holder5{
+    height: 25rem;
   }
 }
 
