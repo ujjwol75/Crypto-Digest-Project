@@ -9,7 +9,9 @@ function LoadMoreCryptoNews({ postsData }) {
   return (
     <div className="loadMoreCryptoNews">
       <div className="morecryptonews-title">
+      <Link href='/cryptoNews'>
         <button className='morecryptonews-button'>LOAD MORE CRYPTO NEWS</button>
+      </Link>  
       </div>
       <div className="loadMoreCryptoNews-content">
         <div className='short-title bigsize' style={{ margin: 0 }}>
