@@ -1002,6 +1002,9 @@ ul.footerlinks {
   .cryptoNewsWrapper {
     flex-direction: column;
   }
+  .cryptoNewsDetails p {
+    font-size:25px;
+  }
 }
 
 /* CryptoNewsWrapper ends here */
