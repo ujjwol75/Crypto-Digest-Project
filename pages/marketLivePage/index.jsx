@@ -8,7 +8,7 @@ const index = () => {
   return (
     <div>
       <Head>
-        <title>Live Market:The Crypto Insider</title>
+        <title>Live Market:The Crypto Digest</title>
       </Head>
       <MarketLivePage />
     </div>

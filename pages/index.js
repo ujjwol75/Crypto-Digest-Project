@@ -7,7 +7,7 @@ export default function Home() {
   return (
   <>
       <Head>
-        <title>CryptoPotato - Home</title>
+        <title>CryptoDigest - Home</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
       </Head>
      <Homebanner/>

@@ -35,7 +35,12 @@ function Navigation() {
     getNuCoinData();
   }, []);
   return (
-    <div style={{ backgroundColor: "lightyellow", display: "flex", position: "fixed", width: "100%", textAlign: "center", alignItems: "center", justifyContent: "center", zIndex: 12 }}>
+    <div style={{
+      backgroundColor: "lightyellow", display: "flex", position: "fixed",
+      left: "50%",
+      transform: "translate(-50%, 0)",
+      width: "84%", margin: "auto", textAlign: "center", alignItems: "center", justifyContent: "center", zIndex: 4
+    }}>
       <ul style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
         <li>
           <div className={styles.currency}>
@@ -155,7 +160,7 @@ function Navigation() {
       </ul>
 
       {/* this will be visible at mobile responsive only*/}
-      <div className="invisiblesection">
+      {/* <div className="invisiblesection">
         <li>
           <div className="img-holder">
             <img src="https://cdn.shortpixel.ai/spai/ret_img/https://cryptopotato.com/wp-content/plugins/cryptocurrency-price-ticker-widget-pro/assets/coin-logos/bitcoin.svg" alt="" />
@@ -170,7 +175,7 @@ function Navigation() {
           <span className='boldname'>ETH</span>
           <span>$1.183.22</span>
         </li>
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -8,7 +8,8 @@ function CryptoNews(props) {
   return (
     <>
       <Head>
-        <title>CryptoPotato - CryptoNews</title>
+      <title>CryptoDigest - News</title>
+
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
       </Head>
       <CryptoNewsWrapper postsData={props.postsData} />

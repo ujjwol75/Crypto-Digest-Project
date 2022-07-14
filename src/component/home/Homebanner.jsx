@@ -22,15 +22,6 @@ function Homebanner() {
 
     return (
         <div className="homebanner container">
-            <div className="bannerupper">
-                <Link href={`/singlepages/${postsData?.results[0]?.slug}`}>
-                    <div className="img-holder" style={{ "height": "10rem" }}>
-                        <img src={bannerImageData?.results[0]?.image} alt="" />
-                        {/* <img src="https://servedbyadbutler.com/getad.img/;libID=3508746" alt=" images" /> */}
-                    </div>
-                </Link>
-            </div>
-            {/* bannerupper ends here */}
 
             <div className="bannerlower">
                 <div className="bannerlower-left">

@@ -30,8 +30,8 @@ function Header() {
         <div className="header container">
             <div className="logo">
                 <Link href="/">
-                    <div className="img-holder">
-                        <img src="https://cdn.shortpixel.ai/spai/q_lossless+ret_img/https://cryptopotato.com/wp-content/uploads/2020/11/cplogo3.png" alt="" />
+                    <div style={{ maxWidth: "80px", alignItems: "center" }} className="img-holder">
+                        <img src="../logo.png" alt="" />
                     </div>
                 </Link>
             </div>
@@ -46,14 +46,14 @@ function Header() {
                         </Link>
                         {navigationListData?.results?.map((item, key) =>
                             <li>
-                                <Link href="/cryptoNews">
+                                <Link href={`/research/${item.category_id}`}>
                                     {
                                         item?.title
                                     }
                                 </Link>
                             </li>
                         )}
-                        <Link href="/margintrading">
+                        <Link href="/postCryptoNews">
                             <li>
                                 Post Crypto News
                             </li>

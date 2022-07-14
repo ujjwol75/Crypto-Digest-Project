@@ -64,6 +64,7 @@ function ContactWrapper() {
           <input type="text" placeholder='Full Name' className='user'
             id='name'
             value={contactformValue.name}
+            required
             onChange={(e) => setContactFormValue((prev) => ({ ...prev, name: e.target.value }))}
           />
           <input type="email" placeholder='Email' className='user'
@@ -71,16 +72,19 @@ function ContactWrapper() {
             handlecontact={handlecontact}
             value={contactformValue.email}
             onChange={(e) => setContactFormValue((prev) => ({ ...prev, email: e.target.value }))}
+            required
           />
           <input type="phone" placeholder='Phone Number' className='user'
             id='phone'
             value={contactformValue.phone}
             onChange={(e) => setContactFormValue((prev) => ({ ...prev, phone: e.target.value }))}
+            required
           />
           <textarea type="text-area" placeholder='Message.....' className='user'
             id='message'
             value={contactformValue.message}
             onChange={(e) => setContactFormValue((prev) => ({ ...prev, message: e.target.value }))}
+            required
           />
           <input type="submit" className='contact-submit' onClick={handleClick} />
         </form>

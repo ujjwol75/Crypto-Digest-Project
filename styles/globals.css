@@ -66,13 +66,17 @@ h2 {
 }
 
 .logo {
-  flex: 24%;
+  /* flex: 1%; */
+  width: 60px;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar {
+  flex: 95%;
   display: flex;
-  justify-content: space-between;
-  flex: 65%;
+  justify-content: start;
+  align-items: center;
   color: white;
   font-weight: bold;
   font-size: 15px;
@@ -113,12 +117,12 @@ h2 {
   background-color: black;
   display: flex;
   position: absolute;
-  z-index: 5;
-  top: 96px;
+  z-index: 15;
+  top: 76px;
   left: 0;
   width: 100%;
   padding: 0 100px;
-  height: 3.6rem;
+  height: 2.6rem;
 }
 
 .searchInputOn form {
@@ -205,7 +209,7 @@ h2 {
   }
 
   .logo {
-    flex: 25%;
+    /* flex: 25%; */
     padding: 12px 0;
   }
 
@@ -1431,6 +1435,7 @@ ul.footerlinks {
 .searchPage {
   display: flex;
   flex-direction: column;
+
 }
 
 /* SearchPage ends here */
@@ -1571,3 +1576,25 @@ textarea {
 }
 
 /* Contact section ends here */
+
+/* Post ARticle */
+
+.articleInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  z-index: 00;
+}
+
+/* .label {
+  font-weight: bold;
+}
+.label:after {
+  color: #e32;
+  content: ' *';
+  display:inline;
+} */
