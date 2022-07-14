@@ -25,71 +25,48 @@ function Header() {
         router.push(`/searchPage/${name}`);
         setName("");
     }
-    console.log('name', name)
 
     return (
         <div className="header container">
             <div className="logo">
                 <Link href="/">
-                    <div className="img-holder">
-                        <img src="https://cdn.shortpixel.ai/spai/q_lossless+ret_img/https://cryptopotato.com/wp-content/uploads/2020/11/cplogo3.png" alt="" />
+                    <div style={{ maxWidth: "80px", alignItems: "center" }} className="img-holder">
+                        <img src="../logo.png" alt="" />
                     </div>
                 </Link>
             </div>
             <div className="navbar">
                 <div className={showNav ? "mobile-menu" : "n-list"}>
                     <ul>
-                        {/* {navigationListData?.results?.map((item, key) =>
+
+                        <Link href="/cryptoNews">
                             <li>
-                                <Link href="/cryptoNews">
+                                Crypto News
+                            </li>
+                        </Link>
+                        {navigationListData?.results?.map((item, key) =>
+                            <li>
+                                <Link href={`/research/${item.category_id}`}>
                                     {
                                         item?.title
                                     }
                                 </Link>
                             </li>
-                        )} */}
-                        <Link href="/cryptoNews">
-                        <li>
-                                Crypto News
-                        </li>
+                        )}
+                        <Link href="/postCryptoNews">
+                            <li>
+                                Post Crypto News
+                            </li>
                         </Link>
-                        <Link href="/margintrading">
-                        <li>
-                                Margin Trading
-                        </li>
-                        </Link>
-                        <Link href="/guides">
-                        <li className='dropdown'>
-                                Guides
-                            <div className='dropdown-content'>
-                                <Link href="/abc">Bitcoins &#38; Cryptoguides 101</Link>
-                                <a href="#">Bitcoins For Beginners</a>
-                                <a href="#">Editorials</a>
-                            </div>
-                        </li>
-                        </Link>
-                        <Link href="/buy">
-                        <li>
-                                Buy
-                        </li>
-                        </Link>
-                        <Link href="/language ">
-                        <li className='dropdown'>
-                                Language
-                            <div className='dropdown-content'>
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </li>
+                        <Link href="/marketLivePage">
+                            <li>
+                                Market Updates
+                            </li>
                         </Link>
                         <Link href="/contact">
-                        <li>
+                            <li>
                                 Contact Us
-                        </li>
+                            </li>
                         </Link>
                     </ul>
                 </div>

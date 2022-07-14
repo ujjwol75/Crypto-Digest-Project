@@ -25,7 +25,6 @@ function ContactWrapper() {
       phone_number: phone,
       message: message
     };
-    console.log('data: ', formData)
     try {
       createMutate({ url, formData });
 
@@ -54,16 +53,15 @@ function ContactWrapper() {
       message: ""
     });
   };
-
-  console.log("handlecontact", contactformValue);
   return (
     <div className="contactWrapper container">
       <div className="contact-Left">
-        <form action="" className="contact-form" onSubmit={handleClick}>
+        <form className="contact-form" onSubmit={handleClick}>
           <h2>Get in Touch</h2>
           <input type="text" placeholder='Full Name' className='user'
             id='name'
             value={contactformValue.name}
+            required
             onChange={(e) => setContactFormValue((prev) => ({ ...prev, name: e.target.value }))}
           />
           <input type="email" placeholder='Email' className='user'
@@ -71,18 +69,21 @@ function ContactWrapper() {
             handlecontact={handlecontact}
             value={contactformValue.email}
             onChange={(e) => setContactFormValue((prev) => ({ ...prev, email: e.target.value }))}
+            required
           />
           <input type="phone" placeholder='Phone Number' className='user'
             id='phone'
             value={contactformValue.phone}
             onChange={(e) => setContactFormValue((prev) => ({ ...prev, phone: e.target.value }))}
+            required
           />
           <textarea type="text-area" placeholder='Message.....' className='user'
             id='message'
             value={contactformValue.message}
             onChange={(e) => setContactFormValue((prev) => ({ ...prev, message: e.target.value }))}
+            required
           />
-          <input type="submit" className='contact-submit' onClick={handleClick} />
+          <input type="submit" className='contact-submit'  />
         </form>
       </div>
       <div className="contact-right">

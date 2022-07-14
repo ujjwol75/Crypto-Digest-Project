@@ -1,13 +1,16 @@
 import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
-import Navigation from './Navigation';
+import Navigation from './Navigation/Navigation';
+
 
 function Layout({ children }) {
     return (
         <>
             <Header />
-            <Navigation />
+            <div style={{ marginBottom: "100px" }}>
+                <Navigation />
+            </div>
             {children}
             <Footer />
         </>
