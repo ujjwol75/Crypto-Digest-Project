@@ -37,15 +37,8 @@ const PostNews = () => {
   //handle pressRelease
   const handlePressRelease = async (event) => {
     event.preventDefault();
-    console.log(new Date(publishDate), "publishDate")
 
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
 
-    setValidated(true);
 
     let formData = new FormData();    //formdata object
     formData.append('email', email);   //append the values with key, value pair
@@ -85,8 +78,8 @@ const PostNews = () => {
     <div className="container">
       <div style={{ width: "80%", margin: "auto" }}>
         <h2>Post Crypto News</h2>
-        <form noValidate
-          validated={validated}
+        <form
+          // validated={validated}
           onSubmit={handlePressRelease}
           style={{ width: "100%", display: "flex", flexDirection: "column" }}
         >
