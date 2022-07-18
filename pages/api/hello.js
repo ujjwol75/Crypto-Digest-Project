@@ -3,5 +3,7 @@ export const APIs={
   posts:'/posts/',
   bannerImage:'/banner-image/',
   newsLetter: '/newsletter-subscription/',
-  contactForm:'contact-us/'
+  contactForm: 'contact-us/',
+  scrappedPost: '/filter-scrapped-posts/',
+  
 }

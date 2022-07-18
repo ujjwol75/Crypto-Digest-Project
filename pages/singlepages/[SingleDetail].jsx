@@ -6,13 +6,12 @@ import { getApiData } from "../../src/helper/AxiosInstance";
 
 
 function SingleDetail(props) {
-console.log(props);
   return (
     <>
       <Head>
-        <title>CryptoPotato - {props?.singlePost?.title}</title>
+        <title>CryptoDigest - {props?.pageScrapped?.title || props?.posts?.title}</title>
       </Head>
-      <SingleDetailWrapper singlePostsData={props?.singlePost} />
+      <SingleDetailWrapper singlePostsData={props?.posts?.detail ? props?.pageScrapped : props.posts} />
     </>
   )
 }
@@ -21,12 +20,12 @@ export default SingleDetail;
 
 
 export async function getServerSideProps({ params }) {
-  const { SingleDetail } = params
-  const url = `${APIs.posts}${SingleDetail}`
-  const singlePost = await getApiData(url)
+  const pageScrappedResponse = await getApiData(`${APIs.scrappedPost}${params?.SingleDetail}`)
+  const postsResponse = await getApiData(`${APIs.posts}${params?.SingleDetail}`)
   return {
     props: {
-      singlePost: singlePost?.data
+      pageScrapped: pageScrappedResponse?.data,
+      posts: postsResponse?.data
     }, // will be passed to the page component as props
   }
 }

@@ -1,33 +1,89 @@
 import React from 'react';
 import {
-  EmailIcon,
-  EmailShareButton,
-  FacebookIcon, FacebookMessengerIcon, FacebookMessengerShareButton,
-  FacebookShareButton, HatenaIcon,
-  HatenaShareButton, InstapaperIcon,
-  InstapaperShareButton,
-  LineShareButton, LinkedinIcon,
-  LinkedinShareButton,
-  LivejournalShareButton,
-  MailruShareButton, PinterestIcon,
-  PinterestShareButton,
-  PocketShareButton,
-  RedditShareButton, TelegramIcon,
-  TelegramShareButton,
-  TumblrShareButton,
-  TwitterIcon,
-  TwitterShareButton,
-  ViberShareButton,
-  VKShareButton, WhatsappIcon,
-  WhatsappShareButton,
-  WorkplaceShareButton
-} from "next-share";
+  FaFacebook,
+  FaTwitter,
+  FaLinkedinIn,
+  FaPinterest,
+  FaMailBulk,
+  FaTelegram,
+} from 'react-icons/fa';
+import Link from 'next/link';
+
 
 const SocialShare = (props) => {
   const { url, title, hashtag, image } = props
   return (
-    <div style={{display: "flex", gap: "10px", marginLeft: "4px", padding: "4px", justifyContent: "start" }}>
-      <FacebookShareButton
+    <div style={{ display: "flex", gap: "10px", marginLeft: "4px", padding: "4px", justifyContent: "start" }}>
+
+      <Link
+        href='https://www.facebook.com/sharer/sharer.php?u=https%3A//insidecrypto.news/'
+        passHref
+      >
+        <a target='_blank' rel='noreferrer'>
+          <FaFacebook
+            style={{
+              width: '30px',
+              height: '30px',
+              cursor: 'pointer',
+            }}
+          />
+        </a>
+      </Link>
+
+      <Link href='https://twitter.com/intent/tweet?text=https%3A//insidecrypto.news/'>
+        <FaTwitter
+          style={{
+            width: '30px',
+            height: '30px',
+            cursor: 'pointer',
+          }}
+        />
+      </Link>
+      <Link href='https://www.linkedin.com/shareArticle?mini=true&url=insidecrypto.news&title=&summary=&source='>
+        <FaLinkedinIn
+          style={{
+            width: '30px',
+            height: '30px',
+            cursor: 'pointer',
+          }}
+        />
+      </Link>
+      <Link href='https://pinterest.com/pin/create/button/?url=https://insidecrypto.news/&media=&description='>
+        <FaPinterest
+          style={{
+            width: '30px',
+            height: '30px',
+            cursor: 'pointer',
+          }}
+        />
+      </Link>
+      <Link href='mailto:info@example.com?&subject=&cc=&bcc=&body=https://insidecrypto.news/%0A'>
+        <FaMailBulk
+          style={{
+            width: '30px',
+            height: '30px',
+            cursor: 'pointer',
+          }}
+        />
+      </Link>
+      <Link href='https://t.me/cryptomediahub'>
+        <FaTelegram
+          style={{
+            width: '30px',
+            height: '30px',
+            cursor: 'pointer',
+          }}
+        />
+      </Link>
+    </div>
+
+  );
+};
+
+export default SocialShare;
+// <div style={{ display: "flex", gap: "10px", marginLeft: "4px", padding: "4px", justifyContent: "start" }}>
+
+{/* <FacebookShareButton
         url={url}
         quote={title}
         hashtag={hashtag}
@@ -108,9 +164,5 @@ const SocialShare = (props) => {
         image={image}
       >
         <WhatsappIcon size={32} round />
-      </WhatsappShareButton>
-    </div>
-  );
-};
-
-export default SocialShare;
+      </WhatsappShareButton> */}
+{/* </div> */ }

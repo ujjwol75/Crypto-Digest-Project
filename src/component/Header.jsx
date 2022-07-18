@@ -53,6 +53,11 @@ function Header() {
                                 </Link>
                             </li>
                         )}
+                        <Link href="/NFT">
+                            <li>
+                                NFT News
+                            </li>
+                        </Link>
                         <Link href="/postCryptoNews">
                             <li>
                                 Post Crypto News
