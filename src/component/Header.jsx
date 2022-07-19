@@ -28,11 +28,17 @@ function Header() {
 
     return (
         <div className="header container">
-            <div className="logo">
+            <div>
                 <Link href="/">
-                    <div style={{ maxWidth: "80px", alignItems: "center" }} className="img-holder">
-                        <img src="../logo.png" alt="" />
-                    </div>
+                    {/* <div style={{ display: "flex", maxWidth: "120px", alignItems: "center", justifyContent: "center" }} className="img-holder"> */}
+                    <img
+                        src="../logo.png"
+                        alt=""
+                    // width="80%"
+                    // height="100%"
+                    />
+
+                    {/* </div> */}
                 </Link>
             </div>
             <div className="navbar">

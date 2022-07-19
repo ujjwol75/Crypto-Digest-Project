@@ -67,15 +67,15 @@ h2 {
 
 .logo {
   /* flex: 1%; */
-  width: 60px;
+  width: auto;
   align-items: center;
   justify-content: center;
 }
 
 .navbar {
-  flex: 95%;
+  flex: 80%;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   color: white;
   font-weight: bold;
