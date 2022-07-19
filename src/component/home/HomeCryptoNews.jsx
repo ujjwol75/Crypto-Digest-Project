@@ -14,7 +14,6 @@ function HomeCryptoNews() {
       url: APIs?.posts
     }
   );
-  // console.log(postsData)
 
   return (
     <div className="homeCryptoNews-wrapper container">
