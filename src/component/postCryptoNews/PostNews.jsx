@@ -143,7 +143,7 @@ const PostNews = () => {
             setContent={setContent}
           />
 
-          <button type="submit" style={{ width: "120px", margin: "10px", padding: "10px" }}>Submit form</button>
+          <button type="submit" style={{ width: "120px", margin: "10px", padding: "10px", cursor:'pointer', borderRadius:'10px' }} className="button-submit">Submit form</button>
         </form>
       </div>
     </div>

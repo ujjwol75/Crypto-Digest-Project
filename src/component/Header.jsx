@@ -9,7 +9,7 @@ import useGetHook from '../customHooks/useGetHooks';
 
 function Header() {
     const [showNav, setshowNav] = useState(false);
-    const [showSearch, setshowSearch] = useState(false);
+    const [showSearch, setshowSearch] = useState(true);
     const [name, setName] = useState("");
     const router = useRouter();
 
@@ -24,21 +24,17 @@ function Header() {
         e.preventDefault();
         router.push(`/searchPage/${name}`);
         setName("");
+        setshowSearch(false)
     }
 
     return (
         <div className="header container">
-            <div>
+            <div style={{cursor:'pointer'}}>
                 <Link href="/">
-                    {/* <div style={{ display: "flex", maxWidth: "120px", alignItems: "center", justifyContent: "center" }} className="img-holder"> */}
                     <img
                         src="../logo.png"
-                        alt=""
-                    // width="80%"
-                    // height="100%"
+                        alt="logo"
                     />
-
-                    {/* </div> */}
                 </Link>
             </div>
             <div className="navbar">

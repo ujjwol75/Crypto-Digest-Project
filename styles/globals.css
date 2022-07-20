@@ -506,6 +506,7 @@ ul.headlist-wrappper li:hover a {
 
 .bannerlower-left {
   flex: 40%;
+  cursor: pointer;
 }
 
 .img-holder2 {
@@ -517,6 +518,7 @@ ul.headlist-wrappper li:hover a {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  cursor: pointer;
 }
 
 .bannerlower-right-bottom {
@@ -708,6 +710,7 @@ iframe {
   gap: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #979c9c;
+  cursor: pointer;
 }
 
 .newsContains-left {
@@ -806,6 +809,7 @@ h5 {
   border: 1px solid #FED319;
   padding: 10px 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .morecryptonews-button:hover {
@@ -839,6 +843,7 @@ h5 {
 
 .releaseSectionContain {
   flex: 20%;
+  cursor: pointer;
 }
 
 .releaseSectionContain .img-holder {
@@ -861,6 +866,7 @@ h5 {
   flex-direction: column;
   gap: 5px;
   flex: 20%;
+  cursor: pointer;
 }
 
 .priceAnalysis .img-holder {
@@ -1388,6 +1394,7 @@ ul.footerlinks {
 .submitbutton {
   background-color: #FED319;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .Form-small-text {
@@ -1477,6 +1484,10 @@ ul.footerlinks {
 
 .contact-Left {
   flex: 60%;
+}
+
+.address-tag:hover{
+  text-decoration: underline;
 }
 
 .contact-form {
@@ -1588,6 +1599,11 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   z-index: 00;
+}
+
+.button-submit:hover{
+  background-color: #3B3B3B;
+  color: white;
 }
 
 /* .label {

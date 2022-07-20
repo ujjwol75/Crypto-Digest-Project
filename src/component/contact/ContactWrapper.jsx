@@ -94,7 +94,7 @@ function ContactWrapper() {
               <BiMap className="contantlist-icon" />
               <div >
                 <p>Address</p>
-                <p>632 Forest Rd Bexley, Sydney, NSW, Australia 2216 – HQ</p>
+                <a href='#' className="address-tag">632 Forest Rd Bexley, Sydney, NSW, Australia 2216 – HQ</a>
               </div>
             </li>
             <li>
@@ -108,13 +108,14 @@ function ContactWrapper() {
               <FiMail className="contantlist-icon" />
               <div>
                 <p>Email</p>
-                <p>admin@cryptodigest.news</p>
+                <a href='#' className="address-tag">admin@cryptodigest.news</a>
               </div>
             </li>
             <li>
               <GoGlobe className="contantlist-icon" />
               <div>
                 <p>Websites</p>
+                <a href="#" className="address-tag">firstwebsite@news</a>
               </div>
             </li>
           </ul>

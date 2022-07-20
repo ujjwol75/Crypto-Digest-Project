@@ -39,7 +39,7 @@ function Navigation() {
       backgroundColor: "lightyellow", display: "flex", position: "fixed",
       left: "50%",
       transform: "translate(-50%, 0)",
-      width: "84%", margin: "auto", textAlign: "center", alignItems: "center", justifyContent: "center", zIndex: 4
+      width: "100%", margin: "auto", textAlign: "center", alignItems: "center", justifyContent: "center", zIndex: 4
     }}>
       <ul style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
         <li>

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import styles from '../MarketLivePage/Market.module.css';
 const MarketLivePage = () => {
 
+  const [viewAll, setViewAll] = useState(true)
   const [limit, setLimit] = useState(10)
   const [loading, setLoading] = useState(true)
 
@@ -208,7 +209,7 @@ const MarketLivePage = () => {
             </tr>
           </tfoot>
         </table>
-        <button
+        {viewAll && <button
           href='#'
           style={{
             backgroundColor: '#fabf2c',
@@ -225,10 +226,12 @@ const MarketLivePage = () => {
             margin: "8px",
             alignItems: 'center'
           }}
-          onClick={() => setLimit(100)}
+          onClick={() => {setLimit(100)
+          setViewAll(false)}}
         >
           View All
-        </button>
+        </button>}
+        
       </div>
 
     </div>
