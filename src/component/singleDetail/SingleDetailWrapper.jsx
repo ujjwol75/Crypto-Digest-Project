@@ -4,6 +4,7 @@ import HomeCryptoNewsRight from '../home/HomeCryptoNewsRight';
 import Singledetailhead from './Singledetailhead';
 import useGetHook from '../../customHooks/useGetHooks';
 import { APIs } from '../../../pages/api/hello';
+import SocialShare from '../SocialShare/SocialShare';
 
 function SingleDetailWrapper({ singlePostsData }) {
 
@@ -14,6 +15,11 @@ function SingleDetailWrapper({ singlePostsData }) {
             url: APIs?.posts
         }
     );
+    let url = "http://cryptodigest.news/"
+    if (typeof window !== "undefined") {
+        // Client-side-only code
+        url = window.location.href;
+    }
     return (
         <div className="singleDetail-wrapper container">
             <div className="homeCryptoNews-left">
@@ -35,9 +41,26 @@ function SingleDetailWrapper({ singlePostsData }) {
                     content={singlePostsData?.content}
                     slug={singlePostsData?.slug}
                 />
+                <div className="socialmedia">
+                    <div className="gifsection">
+                        {/* <div className='short-title'> */}
+                        <span>Social Shares</span>
+                        {/* </div> */}
+                        <SocialShare
+                            url={url}
+                            title={singlePostsData?.title}
+                            hashtag={singlePostsData?.title}
+                            image={singlePostsData?.image || singlePostsData?.preview_image}
+                        />
+                    </div>
+
+                </div>
             </div>
             <div className="homeCrypttoNews-right">
-                <HomeCryptoNewsRight postsData={postsData} />
+
+                <HomeCryptoNewsRight postsData={postsData}
+
+                />
             </div>
         </div>
     )
