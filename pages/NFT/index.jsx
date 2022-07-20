@@ -22,7 +22,6 @@ const Detail = () => {
         <meta property="og:description" content={"All the latest content about Cryptocurrency of the world"} />
         <meta name="twitter:title" content={" CryptoDigest-NFT News"} />
         <meta name="twitter:description" content={"All the latest content about Cryptocurrency of the world"} />
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <meta property="og:type" content="article" />
         {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
         <meta property="fb:app_id" content={"1144829116095615"} />

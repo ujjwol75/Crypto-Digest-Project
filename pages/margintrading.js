@@ -7,7 +7,6 @@ function Margintrading() {
     <>
       <Head>
         <title>CryptoPotato -Margintradding</title>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
       </Head>
     <MarginTradingWrapper/>
     </>
