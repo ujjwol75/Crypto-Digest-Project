@@ -1601,10 +1601,7 @@ textarea {
   z-index: 00;
 }
 
-.button-submit:hover{
-  background-color: #3B3B3B;
-  color: white;
-}
+
 
 /* .label {
   font-weight: bold;

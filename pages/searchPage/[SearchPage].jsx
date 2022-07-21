@@ -5,19 +5,19 @@ import { getApiData } from "../../src/helper/AxiosInstance";
 import SearchPageWrapper from '../../src/component/searchpage/SearchPageWrapper';
 
 function SearchPage(props) {
+  console.log('first', props?.searchPageData)
   return (
     <>
-      <Head>
-        <title> CryptoDigest-Search</title>
-        <meta property="og:title" content={" CryptoDigest-Search"} />
-        <meta property="og:image" content={"https://www.nepalitimes.com/wp-content/uploads/2022/02/cryptocurrency-banned-in-Nepal-NT-2.jpg"} />
-        <meta property="og:description" content={"All the latest content about Cryptocurrency of the world"} />
-        <meta name="twitter:title" content={" CryptoDigest-Search"} />
-        <meta name="twitter:description" content={"All the latest content about Cryptocurrency of the world"} />
-        <meta property="og:type" content="article" />
-        {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
-        <meta property="fb:app_id" content={"1144829116095615"} />
-      </Head>
+        <Head>
+          <title> CryptoDigest-Search</title>
+          <meta property="og:title" content={" CryptoDigest-Search"} />
+          <meta property="og:image" content={"https://www.nepalitimes.com/wp-content/uploads/2022/02/cryptocurrency-banned-in-Nepal-NT-2.jpg"} />
+          <meta property="og:description" content={"All the latest content about Cryptocurrency of the world"} />
+          <meta name="twitter:title" content={" CryptoDigest-Search"} />
+          <meta name="twitter:description" content={"All the latest content about Cryptocurrency of the world"} />
+          <meta property="og:type" content="article" />
+          <meta property="fb:app_id" content={"1144829116095615"} />
+        </Head>
       <SearchPageWrapper data={props?.searchPageData} />
     </>
   )

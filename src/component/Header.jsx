@@ -9,7 +9,7 @@ import useGetHook from '../customHooks/useGetHooks';
 
 function Header() {
     const [showNav, setshowNav] = useState(false);
-    const [showSearch, setshowSearch] = useState(true);
+    const [showSearch, setshowSearch] = useState(false);
     const [name, setName] = useState("");
     const router = useRouter();
 
